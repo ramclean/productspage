@@ -1,10 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 
 export default function Search ({userInput, setUserInput}) {
-
-    
-
 
 
   return (

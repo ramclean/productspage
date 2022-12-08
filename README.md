@@ -4,9 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+To run locally, type open the project directory in terminal and you can run:
 
-### `npm start`
+### `npm install` 
+This will install all packages and dependencies
+
+### `npm start` 
+This will run a development server of the application
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -19,52 +23,14 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Descritption 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The goal was to build a simple web application to allow a user to view a list of products.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I created a functional component named Products, and some child components for search and sort functionality. I implemented one API call using the useEffect hook, which calls on first render of the page and saves the products data to a state variable using the useState hook. This enabled me to use the client to manipulate data as a state variable instead of calling the API several times per user session, saving memory and processing time. 
 
-### `npm run eject`
+Another obstacle I encountered was organising the products by title on first render (as requested in the project specs), as there were products which began with special characters, which upset the flow of the alphabetical order. I was able to solve this using a simple regEx solution to only accept letters or numbers and manage them accordingly. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I then rendered these products in the UI and implemented the added functionalities such as a dynamic search bar and options for deletion and sorting of products. I styled this project using a simple bootstrap grid system and some minor custom CSS changes, making the project fully responsive and viewable on any screen size. 

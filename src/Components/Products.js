@@ -61,14 +61,14 @@ export default function Products() {
             <div className="container search-sort">
                 <Search userInput={userInput} setUserInput={setUserInput} />
                 <SortButtons products={products} setProducts={setProducts} />
-
             </div>
-
 
 
             <div className="container">
                 <div className="row">
+                
                     {
+                        //filter and map products to support dynamic search
                         products
                             .filter(item => {
                                 if (!userInput) return true

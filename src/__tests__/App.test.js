@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import App from '../App';
 import Products from '../Components/Products';
 import Search from '../Components/Search'
-import SortButtons from '../Components/SortButtons'
 
 test('renders app without crashing', () => {
   render(<App />);
